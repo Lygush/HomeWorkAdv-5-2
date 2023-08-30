@@ -14,6 +14,15 @@ public:
         delete[] arr;
     }
 
+    Array(const Array&) = delete;
+
+    Array& operator=(const Array& new_arr) {
+        delete[] arr;
+        this->arr = new_arr.arr;
+        return *this;
+    };
+
+
     const T operator[](int j) const {
         return arr[j];
     }

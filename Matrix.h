@@ -21,6 +21,9 @@ public:
         delete[] matrix;
     }
 
+    Matrix(const Matrix&) = delete;
+    Matrix& operator=(const Matrix&) = delete;
+
     const int size() {
         return row * col;
     }
